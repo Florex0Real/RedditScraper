@@ -7,6 +7,8 @@ This is a Reddit scraping application built with Streamlit that allows users to 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Language: Turkish (Türkçe) - User prefers responses in Turkish.
+GitHub Integration: User wants to upload project to GitHub with proper documentation.
 
 ## System Architecture
 
