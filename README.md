@@ -1,157 +1,156 @@
 # 🔍 Reddit Scraper
 
-Reddit verilerini çekip analiz etmek için kullanıcı dostu bir Streamlit uygulaması. Ücretsiz Reddit API erişimi ile subreddit gönderilerini çekebilir, filtreleyebilir ve CSV formatında dışa aktarabilirsiniz.
+A user-friendly Streamlit application for extracting and analyzing Reddit data. Scrape subreddit posts, filter results, and export data to CSV format using free Reddit API access.
 
-## ✨ Özellikler
+## ✨ Features
 
-### 🎭 Demo Modu
-- API anahtarı olmadan örnek verilerle test edebilirsiniz
-- Arayüzü keşfetmek için hemen başlayın
+### 🎭 Demo Mode
+- Test the interface with sample data without API setup
+- Explore all features instantly
 
-### 🔑 Kişisel API Erişimi
-- Kendi ücretsiz Reddit API kimlik bilgilerinizi kolayca girebilirsiniz
-- Gerçek Reddit verilerine güvenli erişim
-- Adım adım kurulum rehberi dahil
+### 🔑 Personal API Access
+- Easy input for your free Reddit API credentials
+- Secure access to real Reddit data
+- Step-by-step setup guide included
 
-### 📊 Veri Çekme Özellikleri
-- **Çoklu gönderi türleri**: Hot, new, top gönderiler
-- **Zaman filtreleri**: Günlük, haftalık, aylık, yıllık veya tüm zamanlar
-- **Akıllı filtreleme**: Puan ve yorum sayısına göre filtreleme
-- **Gerçek zamanlı ilerleme**: Çekme işlemi sırasında durum güncellemeleri
+### 📊 Data Extraction Features
+- **Multiple post types**: Hot, new, top posts
+- **Time filters**: Daily, weekly, monthly, yearly, or all-time
+- **Smart filtering**: Filter by score and comment count
+- **Real-time progress**: Status updates during scraping
 
-### 💾 Dışa Aktarma
-- CSV formatında veri indirme
-- Otomatik dosya adlandırma
-- Filtrelenmiş verileri kaydetme
+### 💾 Export Options
+- Download data in CSV format
+- Automatic file naming
+- Export filtered datasets
 
-## 🚀 Hızlı Başlangıç
+## 🚀 Quick Start
 
-### 1. Kurulum
+### 1. Installation
 
 ```bash
 git clone https://github.com/yourusername/reddit-scraper.git
 cd reddit-scraper
-pip install -r requirements.txt
+pip install streamlit praw pandas requests
 ```
 
-### 2. Uygulamayı Çalıştırma
+### 2. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-### 3. Tarayıcıda Açma
+### 3. Open in Browser
 
-Uygulama otomatik olarak `http://localhost:8501` adresinde açılacaktır.
+The app will automatically open at `http://localhost:8501`
 
-## 🔧 Reddit API Kurulumu (Ücretsiz)
+## 🔧 Reddit API Setup (Free)
 
-### Adım 1: Reddit Hesabı
-Reddit hesabınızla [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) adresine gidin.
+### Step 1: Reddit Account
+Go to [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) with your Reddit account.
 
-### Adım 2: Uygulama Oluşturma
-1. **"Create App"** veya **"Create Another App"** butonuna tıklayın
-2. Formu doldurun:
-   - **Name**: Uygulamanızın adı (ör: "Benim Reddit Scraper'ım")
-   - **App type**: **"script"** seçeneğini seçin
-   - **Description**: İsteğe bağlı
-   - **About URL**: Boş bırakın
+### Step 2: Create Application
+1. Click **"Create App"** or **"Create Another App"**
+2. Fill out the form:
+   - **Name**: Your app name (e.g., "My Reddit Scraper")
+   - **App type**: Select **"script"**
+   - **Description**: Optional
+   - **About URL**: Leave blank
    - **Redirect URI**: `http://localhost:8080`
-3. **"Create app"** butonuna tıklayın
+3. Click **"Create app"**
 
-### Adım 3: Kimlik Bilgilerini Alma
-- **Client ID**: Uygulama adının altında görünen kısa string
-- **Client Secret**: "reveal" butonuna tıklayarak görebileceğiniz uzun string
+### Step 3: Get Credentials
+- **Client ID**: Short string shown under your app name
+- **Client Secret**: Long string revealed by clicking "reveal"
 
-### Adım 4: Uygulamada Kullanma
-Streamlit arayüzünde bu bilgileri girin ve "Connect to Reddit API" butonuna tıklayın.
+### Step 4: Use in Application
+Enter these credentials in the Streamlit interface and click "Connect to Reddit API".
 
-## 📋 Kullanım
+## 📋 Usage
 
-### Demo Modu
-1. **"Try Demo Mode"** butonuna tıklayın
-2. Örnek verilerle arayüzü keşfedin
-3. Tüm özelliklerini test edin
+### Demo Mode
+1. Click **"Try Demo Mode"**
+2. Explore the interface with sample data
+3. Test all features
 
-### Gerçek Veri Çekme
-1. Reddit API kimlik bilgilerinizi girin
-2. Çekmek istediğiniz subreddit adını yazın (r/ olmadan)
-3. Gönderi türünü seçin (hot, new, top)
-4. Çekilecek gönderi sayısını ayarlayın
-5. **"Scrape Posts"** butonuna tıklayın
+### Real Data Scraping
+1. Enter your Reddit API credentials
+2. Type the subreddit name you want to scrape (without r/)
+3. Select post type (hot, new, top)
+4. Set number of posts to scrape
+5. Click **"Scrape Posts"**
 
-### Filtreleme ve Dışa Aktarma
-1. Minimum puan ve yorum sayısı filtrelerini ayarlayın
-2. Sonuçları inceleyin
-3. **"Export to CSV"** ile verileri indirin
+### Filtering and Export
+1. Set minimum score and comment filters
+2. Review the results
+3. Use **"Export to CSV"** to download data
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
 reddit-scraper/
-├── app.py                 # Ana Streamlit uygulaması
-├── reddit_scraper.py      # Reddit API işlevleri
-├── requirements.txt       # Python bağımlılıkları
+├── app.py                 # Main Streamlit application
+├── reddit_scraper.py      # Reddit API functions
 ├── .streamlit/
-│   └── config.toml       # Streamlit yapılandırması
-└── README.md             # Bu dosya
+│   └── config.toml       # Streamlit configuration
+└── README.md             # This file
 ```
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
-- **[Streamlit](https://streamlit.io/)**: Web arayüzü framework'ü
+- **[Streamlit](https://streamlit.io/)**: Web application framework
 - **[PRAW](https://praw.readthedocs.io/)**: Python Reddit API Wrapper
-- **[Pandas](https://pandas.pydata.org/)**: Veri işleme ve analiz
-- **[Python 3.11+](https://python.org/)**: Programlama dili
+- **[Pandas](https://pandas.pydata.org/)**: Data processing and analysis
+- **[Python 3.11+](https://python.org/)**: Programming language
 
-## 📊 Çekilen Veriler
+## 📊 Extracted Data
 
-Her gönderi için şu bilgiler çekilir:
-- Başlık ve URL
-- Yazar bilgileri
-- Puan ve upvote oranı
-- Yorum sayısı
-- Oluşturulma tarihi ve saati
-- Gönderi içeriği (metin gönderileri için)
-- Gönderi türü (metin/link)
-- Domain bilgisi
-- Özel etiketler (over_18, spoiler, stickied, locked)
+For each post, the following information is extracted:
+- Title and URL
+- Author information
+- Score and upvote ratio
+- Number of comments
+- Creation date and time
+- Post content (for text posts)
+- Post type (text/link)
+- Domain information
+- Special tags (over_18, spoiler, stickied, locked)
 
-## ⚖️ Yasal ve Etik Kullanım
+## ⚖️ Legal and Ethical Usage
 
-- Reddit'in resmi API'sini kullanır
-- Rate limiting kurallarına uyar
-- Kullanım şartlarını respects eder
-- Kişisel ve araştırma amaçlı kullanım için tasarlanmıştır
+- Uses Reddit's official API
+- Respects rate limiting rules
+- Complies with terms of service
+- Designed for personal and research use
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-1. Bu repo'yu fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Pull Request açın
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📝 Lisans
+## 📝 License
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 🆘 Destek
+## 🆘 Support
 
-Herhangi bir sorunla karşılaşırsanız:
-1. [Issues](https://github.com/yourusername/reddit-scraper/issues) sayfasında arayın
-2. Yeni issue açın
-3. Demo modu ile test edip sonucu paylaşın
+If you encounter any issues:
+1. Search the [Issues](https://github.com/yourusername/reddit-scraper/issues) page
+2. Open a new issue
+3. Test with demo mode and share results
 
-## 🔄 Güncellemeler
+## 🔄 Updates
 
 ### v1.0.0
-- ✅ İlk sürüm yayınlandı
-- ✅ Demo modu eklendi
-- ✅ Kullanıcı dostu API kurulumu
-- ✅ CSV dışa aktarma özelliği
-- ✅ Akıllı filtreleme sistemi
+- ✅ Initial release
+- ✅ Demo mode added
+- ✅ User-friendly API setup
+- ✅ CSV export feature
+- ✅ Smart filtering system
 
 ---
 
-**Not**: Bu uygulama sadece public subredditlerden veri çekebilir. Private veya restricted subredditlere erişim sağlamaz.
+**Note**: This application can only scrape data from public subreddits. It does not provide access to private or restricted subreddits.
