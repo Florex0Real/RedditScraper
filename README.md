@@ -1,156 +1,74 @@
-# 🔍 Reddit Scraper
+<div id="top" class="">
 
-A user-friendly Streamlit application for extracting and analyzing Reddit data. Scrape subreddit posts, filter results, and export data to CSV format using free Reddit API access.
+<div align="center" class="text-center">
+<h1>REDDITSCRAPER</h1>
+<p><em>Unlock Insights, Accelerate Decisions, Power Your Data</em></p>
 
-## ✨ Features
-
-### 🎭 Demo Mode
-- Test the interface with sample data without API setup
-- Explore all features instantly
-
-### 🔑 Personal API Access
-- Easy input for your free Reddit API credentials
-- Secure access to real Reddit data
-- Step-by-step setup guide included
-
-### 📊 Data Extraction Features
-- **Multiple post types**: Hot, new, top posts
-- **Time filters**: Daily, weekly, monthly, yearly, or all-time
-- **Smart filtering**: Filter by score and comment count
-- **Real-time progress**: Status updates during scraping
-
-### 💾 Export Options
-- Download data in CSV format
-- Automatic file naming
-- Export filtered datasets
-
-## 🚀 Quick Start
-
-### 1. Installation
-
-```bash
-git clone https://github.com/yourusername/reddit-scraper.git
-cd reddit-scraper
-pip install streamlit praw pandas requests
-```
-
-### 2. Run the Application
-
-```bash
-streamlit run app.py
-```
-
-### 3. Open in Browser
-
-The app will automatically open at `http://localhost:8501`
-
-## 🔧 Reddit API Setup (Free)
-
-### Step 1: Reddit Account
-Go to [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) with your Reddit account.
-
-### Step 2: Create Application
-1. Click **"Create App"** or **"Create Another App"**
-2. Fill out the form:
-   - **Name**: Your app name (e.g., "My Reddit Scraper")
-   - **App type**: Select **"script"**
-   - **Description**: Optional
-   - **About URL**: Leave blank
-   - **Redirect URI**: `http://localhost:8080`
-3. Click **"Create app"**
-
-### Step 3: Get Credentials
-- **Client ID**: Short string shown under your app name
-- **Client Secret**: Long string revealed by clicking "reveal"
-
-### Step 4: Use in Application
-Enter these credentials in the Streamlit interface and click "Connect to Reddit API".
-
-## 📋 Usage
-
-### Demo Mode
-1. Click **"Try Demo Mode"**
-2. Explore the interface with sample data
-3. Test all features
-
-### Real Data Scraping
-1. Enter your Reddit API credentials
-2. Type the subreddit name you want to scrape (without r/)
-3. Select post type (hot, new, top)
-4. Set number of posts to scrape
-5. Click **"Scrape Posts"**
-
-### Filtering and Export
-1. Set minimum score and comment filters
-2. Review the results
-3. Use **"Export to CSV"** to download data
-
-## 📁 Project Structure
-
-```
-reddit-scraper/
-├── app.py                 # Main Streamlit application
-├── reddit_scraper.py      # Reddit API functions
-├── .streamlit/
-│   └── config.toml       # Streamlit configuration
-└── README.md             # This file
-```
-
-## 🛠️ Technologies
-
-- **[Streamlit](https://streamlit.io/)**: Web application framework
-- **[PRAW](https://praw.readthedocs.io/)**: Python Reddit API Wrapper
-- **[Pandas](https://pandas.pydata.org/)**: Data processing and analysis
-- **[Python 3.11+](https://python.org/)**: Programming language
-
-## 📊 Extracted Data
-
-For each post, the following information is extracted:
-- Title and URL
-- Author information
-- Score and upvote ratio
-- Number of comments
-- Creation date and time
-- Post content (for text posts)
-- Post type (text/link)
-- Domain information
-- Special tags (over_18, spoiler, stickied, locked)
-
-## ⚖️ Legal and Ethical Usage
-
-- Uses Reddit's official API
-- Respects rate limiting rules
-- Complies with terms of service
-- Designed for personal and research use
-
-## 🤝 Contributing
-
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## 🆘 Support
-
-If you encounter any issues:
-1. Search the [Issues](https://github.com/yourusername/reddit-scraper/issues) page
-2. Open a new issue
-3. Test with demo mode and share results
-
-## 🔄 Updates
-
-### v1.0.0
-- ✅ Initial release
-- ✅ Demo mode added
-- ✅ User-friendly API setup
-- ✅ CSV export feature
-- ✅ Smart filtering system
-
----
-
-**Note**: This application can only scrape data from public subreddits. It does not provide access to private or restricted subreddits.
+<img alt="last-commit" src="https://img.shields.io/github/last-commit/Florex0Real/RedditScraper?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-top-language" src="https://img.shields.io/github/languages/top/Florex0Real/RedditScraper?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-language-count" src="https://img.shields.io/github/languages/count/Florex0Real/RedditScraper?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<p><em>Built with the tools and technologies:</em></p>
+<img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&amp;logo=Markdown&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat&amp;logo=Streamlit&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="TOML" src="https://img.shields.io/badge/TOML-9C4121.svg?style=flat&amp;logo=TOML&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&amp;logo=Python&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="pandas" src="https://img.shields.io/badge/pandas-150458.svg?style=flat&amp;logo=pandas&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="uv" src="https://img.shields.io/badge/uv-DE5FE9.svg?style=flat&amp;logo=uv&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+</div>
+<br>
+<hr>
+<h2>Table of Contents</h2>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><a href="#overview">Overview</a></li>
+<li class="my-0"><a href="#getting-started">Getting Started</a>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><a href="#prerequisites">Prerequisites</a></li>
+<li class="my-0"><a href="#installation">Installation</a></li>
+<li class="my-0"><a href="#usage">Usage</a></li>
+<li class="my-0"><a href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Overview</h2>
+<hr>
+<h2>Getting Started</h2>
+<h3>Prerequisites</h3>
+<p>This project requires the following dependencies:</p>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><strong>Programming Language:</strong> Python</li>
+<li class="my-0"><strong>Package Manager:</strong> Uv</li>
+</ul>
+<h3>Installation</h3>
+<p>Build RedditScraper from the source and install dependencies:</p>
+<ol>
+<li class="my-0">
+<p><strong>Clone the repository:</strong></p>
+<pre><code class="language-sh">❯ git clone https://github.com/Florex0Real/RedditScraper
+</code></pre>
+</li>
+<li class="my-0">
+<p><strong>Navigate to the project directory:</strong></p>
+<pre><code class="language-sh">❯ cd RedditScraper
+</code></pre>
+</li>
+<li class="my-0">
+<p><strong>Install the dependencies:</strong></p>
+</li>
+</ol>
+<p><strong>Using <a href="https://docs.astral.sh/uv/">uv</a>:</strong></p>
+<pre><code class="language-sh">❯ uv sync --all-extras --dev
+</code></pre>
+<h3>Usage</h3>
+<p>Run the project with:</p>
+<p><strong>Using <a href="https://docs.astral.sh/uv/">uv</a>:</strong></p>
+<pre><code class="language-sh">uv run python {entrypoint}
+</code></pre>
+<h3>Testing</h3>
+<p>Redditscraper uses the {<strong>test_framework</strong>} test framework. Run the test suite with:</p>
+<p><strong>Using <a href="https://docs.astral.sh/uv/">uv</a>:</strong></p>
+<pre><code class="language-sh">uv run pytest tests/
+</code></pre>
+<hr>
+<div align="left" class=""><a href="#top">⬆ Return</a></div>
+<hr></div>
